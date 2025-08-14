@@ -1688,3 +1688,429 @@ agent.run("What is the temperature in Tokyo and convert it to Fahrenheit?")
 <h3 style="color: white; margin: 0;">📚 Complete Reference Guide</h3>
 <p style="margin: 10px 0 0 0;">This tabular summary serves as your comprehensive reference for all Day 1 concepts, implementations, and best practices in Agentic AI development.</p>
 </div>
+
+---
+
+## 🎯 **Visual Flow Diagrams for Agentic AI Implementation**
+
+### **1. Basic Agent Architecture Flow**
+
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Basic Agent Architecture</text>
+  
+  <!-- Input -->
+  <rect x="50" y="80" width="120" height="60" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">User Input</text>
+  <text x="110" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">(Goal/Query)</text>
+  
+  <!-- LLM Processing -->
+  <rect x="220" y="80" width="120" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="280" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">LLM</text>
+  <text x="280" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Processing</text>
+  
+  <!-- Decision Making -->
+  <polygon points="420,80 480,110 420,140 360,110" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="420" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Decision</text>
+  <text x="420" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Making</text>
+  
+  <!-- Tool Use -->
+  <rect x="520" y="80" width="120" height="60" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="580" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Tool Use</text>
+  <text x="580" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">(APIs/Search)</text>
+  
+  <!-- Memory -->
+  <rect x="220" y="200" width="120" height="60" fill="#1abc9c" stroke="#16a085" stroke-width="2" rx="5"/>
+  <text x="280" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Memory</text>
+  <text x="280" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">(Context)</text>
+  
+  <!-- Output -->
+  <rect x="520" y="200" width="120" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="580" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Final</text>
+  <text x="580" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Output</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <line x1="170" y1="110" x2="220" y2="110" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="340" y1="110" x2="360" y2="110" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="480" y1="110" x2="520" y2="110" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="280" y1="140" x2="280" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="580" y1="140" x2="580" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feedback loop -->
+  <path d="M 340 230 Q 400 280 520 230" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <text x="430" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e67e22">Feedback Loop</text>
+</svg>
+
+### **2. ReAct Pattern Flow**
+
+<svg width="800" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">ReAct Pattern: Reasoning + Action</text>
+  
+  <!-- Thought -->
+  <ellipse cx="150" cy="100" rx="80" ry="40" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">THOUGHT</text>
+  <text x="150" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Reasoning</text>
+  
+  <!-- Action -->
+  <rect x="320" y="70" width="100" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="370" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">ACTION</text>
+  <text x="370" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Tool Use</text>
+  
+  <!-- Observation -->
+  <ellipse cx="550" cy="100" rx="80" ry="40" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="550" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">OBSERVE</text>
+  <text x="550" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Results</text>
+  
+  <!-- Decision Diamond -->
+  <polygon points="370,200 420,230 370,260 320,230" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="370" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Goal</text>
+  <text x="370" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Met?</text>
+  
+  <!-- Final Answer -->
+  <rect x="520" y="200" width="100" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="570" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">ANSWER</text>
+  <text x="570" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Final Result</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <line x1="230" y1="100" x2="320" y2="100" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="420" y1="100" x2="470" y2="100" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="550" y1="140" x2="370" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <line x1="420" y1="230" x2="520" y2="230" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Loop back -->
+  <path d="M 320 230 Q 200 280 150 140" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#arrowhead2)" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <text x="275" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Plan</text>
+  <text x="445" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Execute</text>
+  <text x="460" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Evaluate</text>
+  <text x="470" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Yes</text>
+  <text x="200" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e67e22">No - Continue Loop</text>
+</svg>
+
+### **3. Multi-LLM Orchestration Flow**
+
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Multi-LLM Orchestration Pattern</text>
+  
+  <!-- User Input -->
+  <rect x="350" y="60" width="100" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="400" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">User Query</text>
+  
+  <!-- Orchestrator -->
+  <rect x="320" y="140" width="160" height="60" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="400" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">ORCHESTRATOR</text>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(Planner LLM)</text>
+  
+  <!-- Worker LLMs -->
+  <rect x="80" y="280" width="120" height="60" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="140" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">RESEARCHER</text>
+  <text x="140" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Worker LLM 1</text>
+  
+  <rect x="240" y="280" width="120" height="60" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="300" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">ANALYZER</text>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Worker LLM 2</text>
+  
+  <rect x="440" y="280" width="120" height="60" fill="#1abc9c" stroke="#16a085" stroke-width="2" rx="5"/>
+  <text x="500" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">WRITER</text>
+  <text x="500" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Worker LLM 3</text>
+  
+  <rect x="600" y="280" width="120" height="60" fill="#e67e22" stroke="#d35400" stroke-width="2" rx="5"/>
+  <text x="660" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">EVALUATOR</text>
+  <text x="660" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Worker LLM 4</text>
+  
+  <!-- Synthesizer -->
+  <rect x="320" y="400" width="160" height="60" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">SYNTHESIZER</text>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">(Combiner LLM)</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <line x1="400" y1="100" x2="400" y2="140" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  
+  <!-- Orchestrator to Workers -->
+  <line x1="350" y1="200" x2="140" y2="280" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="380" y1="200" x2="300" y2="280" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="420" y1="200" x2="500" y2="280" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="450" y1="200" x2="660" y2="280" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  
+  <!-- Workers to Synthesizer -->
+  <line x1="140" y1="340" x2="350" y2="400" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="300" y1="340" x2="380" y2="400" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="500" y1="340" x2="420" y2="400" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="660" y1="340" x2="450" y2="400" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  
+  <!-- Task Labels -->
+  <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Task 1</text>
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Task 2</text>
+  <text x="500" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Task 3</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Task 4</text>
+  
+  <!-- Result Labels -->
+  <text x="200" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Result 1</text>
+  <text x="300" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Result 2</text>
+  <text x="500" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Result 3</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#34495e">Result 4</text>
+</svg>
+
+### **4. Tree of Thoughts Pattern**
+
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Tree of Thoughts: Multiple Reasoning Paths</text>
+  
+  <!-- Root Problem -->
+  <rect x="350" y="60" width="100" height="40" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="400" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Problem</text>
+  
+  <!-- Level 1 Thoughts -->
+  <ellipse cx="200" cy="150" rx="60" ry="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Thought 1</text>
+  
+  <ellipse cx="400" cy="150" rx="60" ry="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="400" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Thought 2</text>
+  
+  <ellipse cx="600" cy="150" rx="60" ry="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Thought 3</text>
+  
+  <!-- Level 2 Thoughts -->
+  <ellipse cx="120" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="120" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 1A</text>
+  
+  <ellipse cx="280" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="280" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 1B</text>
+  
+  <ellipse cx="350" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="350" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 2A</text>
+  
+  <ellipse cx="450" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="450" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 2B</text>
+  
+  <ellipse cx="550" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="550" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 3A</text>
+  
+  <ellipse cx="680" cy="240" rx="50" ry="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="680" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Path 3B</text>
+  
+  <!-- Evaluation -->
+  <rect x="320" y="320" width="160" height="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="400" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Evaluation & Selection</text>
+  
+  <!-- Best Solution -->
+  <ellipse cx="400" cy="400" rx="80" ry="30" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+  <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Best Solution</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <!-- Root to Level 1 -->
+  <line x1="370" y1="100" x2="220" y2="130" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="400" y1="100" x2="400" y2="120" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="430" y1="100" x2="580" y2="130" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  
+  <!-- Level 1 to Level 2 -->
+  <line x1="170" y1="170" x2="140" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="230" y1="170" x2="260" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="370" y1="170" x2="370" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="430" y1="170" x2="430" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="570" y1="170" x2="570" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="630" y1="170" x2="660" y2="215" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  
+  <!-- Level 2 to Evaluation -->
+  <line x1="280" y1="265" x2="350" y2="320" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  <line x1="450" y1="265" x2="430" y2="320" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  
+  <!-- Evaluation to Best -->
+  <line x1="400" y1="360" x2="400" y2="370" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead4)"/>
+  
+  <!-- Score labels -->
+  <text x="120" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">Score: 6.2</text>
+  <text x="280" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#27ae60">Score: 8.7</text>
+  <text x="350" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">Score: 5.1</text>
+  <text x="450" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#27ae60">Score: 8.9</text>
+  <text x="550" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">Score: 4.3</text>
+  <text x="680" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c">Score: 6.8</text>
+</svg>
+
+### **5. Quality Control & Validation Flow**
+
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Quality Control & Validation Pipeline</text>
+  
+  <!-- LLM Output -->
+  <rect x="50" y="80" width="100" height="50" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="100" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">LLM</text>
+  <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Output</text>
+  
+  <!-- Self-Check -->
+  <rect x="200" y="60" width="90" height="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="245" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Self-Check</text>
+  
+  <!-- Tool Validation -->
+  <rect x="200" y="120" width="90" height="40" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="245" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Tool Valid.</text>
+  
+  <!-- Human Review -->
+  <rect x="200" y="180" width="90" height="40" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="245" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Human Rev.</text>
+  
+  <!-- Voting System -->
+  <rect x="200" y="240" width="90" height="40" fill="#1abc9c" stroke="#16a085" stroke-width="2" rx="5"/>
+  <text x="245" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Voting Sys.</text>
+  
+  <!-- Decision Diamond -->
+  <polygon points="400,150 450,180 400,210 350,180" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Valid?</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Quality?</text>
+  
+  <!-- Approved Output -->
+  <rect x="550" y="160" width="100" height="50" fill="#27ae60" stroke="#229954" stroke-width="2" rx="5"/>
+  <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Approved</text>
+  <text x="600" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Output</text>
+  
+  <!-- Refinement Loop -->
+  <rect x="350" y="280" width="100" height="50" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Refine &</text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Retry</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <line x1="150" y1="105" x2="200" y2="80" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="150" y1="105" x2="200" y2="140" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="150" y1="105" x2="200" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="150" y1="105" x2="200" y2="260" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  
+  <line x1="290" y1="80" x2="350" y2="160" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="290" y1="140" x2="350" y2="170" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="290" y1="200" x2="350" y2="190" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="290" y1="260" x2="350" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  
+  <line x1="450" y1="180" x2="550" y2="185" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  <line x1="400" y1="210" x2="400" y2="280" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead5)"/>
+  
+  <!-- Feedback loop -->
+  <path d="M 350 305 Q 100 350 100 130" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#arrowhead5)" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <text x="480" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">✓ Pass</text>
+  <text x="320" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">✗ Fail</text>
+  <text x="150" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e67e22">Feedback Loop</text>
+</svg>
+
+### **6. Implementation Roadmap**
+
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Agentic AI Implementation Roadmap</text>
+  
+  <!-- Phase 1 -->
+  <rect x="50" y="80" width="120" height="80" fill="#3498db" stroke="#2980b9" stroke-width="2" rx="5"/>
+  <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Phase 1</text>
+  <text x="110" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Basic LLM</text>
+  <text x="110" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Integration</text>
+  <text x="110" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Simple Tools</text>
+  
+  <!-- Phase 2 -->
+  <rect x="210" y="80" width="120" height="80" fill="#e74c3c" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="270" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Phase 2</text>
+  <text x="270" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Decision Logic</text>
+  <text x="270" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Memory System</text>
+  <text x="270" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Basic Agents</text>
+  
+  <!-- Phase 3 -->
+  <rect x="370" y="80" width="120" height="80" fill="#f39c12" stroke="#e67e22" stroke-width="2" rx="5"/>
+  <text x="430" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Phase 3</text>
+  <text x="430" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">ReAct Pattern</text>
+  <text x="430" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Quality Control</text>
+  <text x="430" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Validation</text>
+  
+  <!-- Phase 4 -->
+  <rect x="530" y="80" width="120" height="80" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" rx="5"/>
+  <text x="590" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Phase 4</text>
+  <text x="590" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Multi-LLM</text>
+  <text x="590" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Orchestration</text>
+  <text x="590" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Advanced Patterns</text>
+  
+  <!-- Timeline -->
+  <line x1="50" y1="200" x2="650" y2="200" stroke="#34495e" stroke-width="3"/>
+  
+  <!-- Timeline markers -->
+  <circle cx="110" cy="200" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <circle cx="270" cy="200" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="430" cy="200" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <circle cx="590" cy="200" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  
+  <!-- Timeline labels -->
+  <text x="110" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Week 1-2</text>
+  <text x="270" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Week 3-4</text>
+  <text x="430" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Week 5-6</text>
+  <text x="590" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34495e">Week 7-8</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+  
+  <line x1="170" y1="120" x2="210" y2="120" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead6)"/>
+  <line x1="330" y1="120" x2="370" y2="120" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead6)"/>
+  <line x1="490" y1="120" x2="530" y2="120" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead6)"/>
+  
+  <!-- Success Metrics -->
+  <text x="400" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Success Metrics: Autonomy → Tool Use → Quality → Scalability</text>
+</svg>
+
+---
+
+<div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); padding: 20px; border-radius: 10px; color: white; text-align: center; margin: 20px 0;">
+<h3 style="color: white; margin: 0;">🎯 Visual Implementation Guide</h3>
+<p style="margin: 10px 0 0 0;">These flow diagrams provide a visual roadmap for implementing each agentic AI pattern, from basic architectures to advanced multi-LLM orchestration systems.</p>
+</div>
