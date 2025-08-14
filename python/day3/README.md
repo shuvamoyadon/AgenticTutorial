@@ -1,14 +1,19 @@
 # 🔗 Connecting Agentic Patterns to Tools
 
-## 📋 Overview
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin-bottom: 20px;">
+<h2 style="color: white; margin: 0;">🚀 Tool Integration & Agentic Patterns</h2>
+<p style="margin: 10px 0 0 0;">Master the art of connecting AI agents with external tools and APIs</p>
+</div>
+
+## <span style="color: #FF6B6B;">📋 Overview</span>
 
 This guide demonstrates how an AI agent can use the "tool use" agentic pattern to interact with external tools (like APIs or web searches). It covers the essential building blocks for creating effective AI agents and provides practical Python implementations using the Groq API.
 
 ---
 
-## 🛠️ Basic Tool Use Pattern Implementation
+## <span style="color: #4ECDC4;">🛠️ Basic Tool Use Pattern Implementation</span>
 
-### Python Implementation with OpenAI Function Calling
+### <span style="color: #45B7D1;">Python Implementation with OpenAI Function Calling</span>
 
 ```python
 import openai
@@ -86,7 +91,7 @@ print(agent_respond_with_llm("Tell me a joke."))  # Handled directly by the LLM
 
 ---
 
-## 🏗️ Essential Building Blocks for Effective AI Agents
+## <span style="color: #FF9F43;">🏗️ Essential Building Blocks for Effective AI Agents</span>
 
 | Building Block | Description |
 |:--|:--|
@@ -103,21 +108,21 @@ print(agent_respond_with_llm("Tell me a joke."))  # Handled directly by the LLM
 
 ---
 
-## 🚀 Python Implementation Using Groq API
+## <span style="color: #6C5CE7;">🚀 Python Implementation Using Groq API</span>
 
-### 1. 🎯 Goal Definition
+### <span style="color: #FD79A8;">1. 🎯 Goal Definition</span>
 ```python
 # Agent's main objective, defined for prompt clarity and reasoning
 AGENT_GOAL = "Summarize scientific articles so non-experts can understand them."
 ```
 
-### 2. 👁️ Perception/Input
+### <span style="color: #FDCB6E;">2. 👁️ Perception/Input</span>
 ```python
 # Example: Receive input from user or an external API
 user_query = input("Ask the agent: ")
 ```
 
-### 3. 🧠 Reasoning & Planning (LLM via Groq)
+### <span style="color: #00CEC9;">3. 🧠 Reasoning & Planning (LLM via Groq)</span>
 ```python
 import os
 from groq import Groq
@@ -135,7 +140,7 @@ response = client.chat.completions.create(
 print("Agent:", response.choices[0].message.content)
 ```
 
-### 4. 🔧 Tool Use / Action Modules
+### <span style="color: #FF7675;">4. 🔧 Tool Use / Action Modules</span>
 ```python
 # Simple tool functions, agent decides (can also be triggered by the LLM's suggestion)
 def search_tool(query):
@@ -153,7 +158,7 @@ def math_tool(expression):
 # print(result)
 ```
 
-### 5. 💾 Memory / State Management
+### <span style="color: #74B9FF;">5. 💾 Memory / State Management</span>
 ```python
 # Maintain chat/conversation history for continuity and context
 conversation_history = [
@@ -165,7 +170,7 @@ conversation_history.append({"role": "assistant", "content": response.choices[0]
 # For context persistence, pass conversation_history to future LLM calls
 ```
 
-### 6. ⚖️ Decision-Making Policy
+### <span style="color: #55A3FF;">6. ⚖️ Decision-Making Policy</span>
 ```python
 # Decide next action/tool based on analysis (simple rule-based, LLM-powered, or both)
 def choose_action(query):
@@ -178,7 +183,7 @@ def choose_action(query):
         return response.choices[0].message.content
 ```
 
-### 7. 📈 Learning & Adaptation
+### <span style="color: #A29BFE;">7. 📈 Learning & Adaptation</span>
 ```python
 # Collect user feedback for incremental improvement/future tuning
 feedback = input("Was this answer helpful? (y/n): ")
@@ -190,7 +195,7 @@ log_entry = {
 # Store log_entry for analysis or model fine-tuning downstream
 ```
 
-### 8. 🛡️ Safety & Alignment
+### <span style="color: #00B894;">8. 🛡️ Safety & Alignment</span>
 ```python
 # Filter/block unsafe requests before dispatching to the LLM
 unsafe_keywords = ["hack", "illegal", "scam"]
@@ -201,7 +206,7 @@ else:
     pass
 ```
 
-### 9. 🔌 Modularity & Extensibility
+### <span style="color: #E84393;">9. 🔌 Modularity & Extensibility</span>
 ```python
 # Easily add new tools or swap components with a Python dictionary registry
 TOOLS = {
@@ -219,7 +224,7 @@ if tool_to_use in TOOLS:
 
 ---
 
-## 🎯 Key Takeaways
+## <span style="color: #E17055;">🎯 Key Takeaways</span>
 
 - **🔗 Tool Integration**: Effective AI agents seamlessly integrate external tools through well-defined interfaces
 - **🏗️ Modular Architecture**: Building blocks approach allows for flexible and extensible agent design
@@ -230,7 +235,7 @@ if tool_to_use in TOOLS:
 
 ---
 
-## 🚀 Next Steps
+## <span style="color: #00B894;">🚀 Next Steps</span>
 
 1. **Implement Real Tools**: Replace placeholder functions with actual API integrations
 2. **Add Error Handling**: Implement robust error handling for tool failures

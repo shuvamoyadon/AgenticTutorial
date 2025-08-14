@@ -1,14 +1,17 @@
 # 🤖 Multi-Model Orchestrations & AI Evaluation Systems
 
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin-bottom: 20px;">
+<h2 style="color: white; margin: 0;">🚀 Multi-Model AI Evaluation Systems</h2>
+<p style="margin: 10px 0 0 0;">Learn to build comprehensive systems for evaluating and orchestrating multiple AI models</p>
+</div>
 
-## 🎯 **How to Create a System that Evaluates Responses from Multiple AI Models**
+## <span style="color: #FF6B6B;">🎯 How to Create a System that Evaluates Responses from Multiple AI Models?</span>
 
 Creating a comprehensive evaluation system for multiple AI models requires careful planning and implementation across several key areas. Here's a structured approach:
 
 ---
 
-## 🏗️ **Technical Architecture**
+## <span style="color: #4ECDC4;">🏗️ Technical Architecture</span>
 
 | Layer | Components | Technologies | Responsibilities |
 | :-- | :-- | :-- | :-- |
@@ -20,7 +23,7 @@ Creating a comprehensive evaluation system for multiple AI models requires caref
 
 ---
 
-## 📊 **Evaluation Methodologies**
+## <span style="color: #45B7D1;">📊 Evaluation Methodologies</span>
 
 | Approach | Description | Best Use Cases | Implementation Complexity |
 | :-- | :-- | :-- | :-- |
@@ -32,7 +35,7 @@ Creating a comprehensive evaluation system for multiple AI models requires caref
 
 ---
 
-## 🔑 **Key Considerations**
+## <span style="color: #FF9F43;">🔑 Key Considerations</span>
 
 | Aspect | Considerations | Recommendations |
 | :-- | :-- | :-- |
@@ -44,7 +47,7 @@ Creating a comprehensive evaluation system for multiple AI models requires caref
 
 ---
 
-## 🔄 **Sample Workflow**
+## <span style="color: #6C5CE7;">🔄 Sample Workflow</span>
 
 | Step | Process | Input | Output |
 | :-- | :-- | :-- | :-- |
@@ -57,7 +60,7 @@ Creating a comprehensive evaluation system for multiple AI models requires caref
 
 ---
 
-## 🧪 **Python Implementation Example**
+## <span style="color: #E17055;">🧪 Python Implementation Example</span>
 
 ```python
 import random  # For simulating scores and responses
@@ -142,7 +145,7 @@ for model, data in ranked_results:
 
 ---
 
-## 🎯 **Why Multi-Model Orchestration Matters for AI Quality Assessment**
+## <span style="color: #00B894;">🎯 Why Multi-Model Orchestration Matters for AI Quality Assessment?</span>
 
 ### **🔍 Diverse Perspectives**
 Different models provide varied reasoning and linguistic styles, reducing single-model bias.
@@ -163,12 +166,12 @@ Allows performance tracking of models over time and under different scenarios.
 
 ---
 
-## 🧠 **Best Practices for Building AI Evaluation Frameworks**
+## <span style="color: #A29BFE;">🧠 Best Practices for Building AI Evaluation Frameworks</span>
 
-### **1. 🎯 Define Clear Evaluation Objectives**
+### <span style="color: #FD79A8;">1. 🎯 Define Clear Evaluation Objectives</span>
 Establish what you are measuring: accuracy, relevance, safety, coherence, or style.
 
-### **2. 📏 Use Multi-Dimensional Metrics**
+### <span style="color: #FDCB6E;">2. 📏 Use Multi-Dimensional Metrics</span>
 
 #### **🤖 Automated Metrics:**
 - **BLEU/ROUGE** (text similarity)
@@ -182,31 +185,31 @@ Establish what you are measuring: accuracy, relevance, safety, coherence, or sty
 #### **⚖️ LLM-as-a-Judge:**
 - Use strong models (e.g., GPT-4) to evaluate weaker ones objectively
 
-### **3. 🔗 Leverage Multi-Model Orchestration**
+### <span style="color: #6C5CE7;">3. 🔗 Leverage Multi-Model Orchestration</span>
 - Compare outputs from different AI models to detect inconsistencies
 - Use voting/ranking systems to select the best response
 - Build fallback mechanisms if a model fails or outputs low-confidence responses
 
-### **4. ⚡ Automate and Scale Evaluation**
+### <span style="color: #00CEC9;">4. ⚡ Automate and Scale Evaluation</span>
 - Integrate evaluation into CI/CD pipelines
 - Use frameworks like LangChain Eval, TruLens, or Weights & Biases for automation
 - Maintain a test dataset for regression testing
 
-### **5. 🔄 Enable Human-in-the-Loop (HITL)**
+### <span style="color: #FF7675;">5. 🔄 Enable Human-in-the-Loop (HITL)</span>
 - Use expert reviewers for high-stakes domains (healthcare, finance)
 - Combine human scoring + AI scoring for better reliability
 
-### **6. 🔁 Iterate and Feedback Loop**
+### <span style="color: #74B9FF;">6. 🔁 Iterate and Feedback Loop</span>
 - Use evaluation results to fine-tune prompts or models
 - Continuously benchmark models as they evolve
 
-### **7. 📊 Benchmark Against Baselines**
+### <span style="color: #55A3FF;">7. 📊 Benchmark Against Baselines</span>
 - Always compare new models or prompts against a baseline (control)
 - Maintain leaderboards to visualize progress
 
 ---
 
-## 🎯 **Key Takeaways**
+## <span style="color: #E84393;">🎯 Key Takeaways</span>
 
 ### **Essential Concepts**
 - **Multi-Model Orchestration**: Leveraging multiple AI models for better quality assessment
